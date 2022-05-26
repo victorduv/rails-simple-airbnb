@@ -1,29 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div class="banner" style="background-image: url('https://source.unsplash.com/random/?villa')">
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @flat.name %>
-</p>
+<div class="container">
+  <div class="card bg-light my-3">
+    <div class="card-body">
+      <h2 class="card-title"><%= @flat.name %></h2>
+      <p><%= @flat.address %></p>
+    </div>
+  </div>
 
-<p>
-  <strong>Address:</strong>
-  <%= @flat.address %>
-</p>
+  <div class="card bg-light my-3">
+    <div class="card-body">
+      <h3 class="card-title">A bit more about this flat</h3>
+      <p><%= @flat.description %></p>
+    </div>
+  </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @flat.description %>
-</p>
+  <div class="card bg-light my-3">
+    <div class="card-body">
+      <h3 class="card-title">Details</h3>
+      <div class="d-flex gap-3">
+        <i class="fa-solid fa-user-group">  <%= @flat.number_of_guests %></i>
+        <i class="fa-solid fa-euro-sign">  <%= @flat.price_per_night %></i>
+      </div>
+    </div>
+  </div>
 
-<p>
-  <strong>Price per night:</strong>
-  <%= @flat.price_per_night %>
-</p>
-
-<p>
-  <strong>Number of guests:</strong>
-  <%= @flat.number_of_guests %>
-</p>
-
-<%= link_to 'Edit', edit_flat_path(@flat) %> |
-<%= link_to 'Back', flats_path %>
+  <%= link_to 'Edit', edit_flat_path(@flat) %> |
+  <%= link_to 'Back', flats_path %>
+</div>

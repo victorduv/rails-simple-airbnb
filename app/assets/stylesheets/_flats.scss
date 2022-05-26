@@ -1,0 +1,15 @@
+// Place all the styles related to the Flats controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.banner {
+  min-height: 50vh;
+  background-position: center;
+  background-size: cover;
+  // background-repeat: no-repeat;
+}
+
+.container {
+  position: relative;
+  bottom: 50px;
+}

@@ -8,9 +8,21 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/66112e6f8b.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
+    <nav class="navbar bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/flats">
+          <%= image_tag 'Airbnb-logo.png', class: 'd-inline-block align-text-top', height: '40px' %>
+          Victor's Airbnb
+        </a>
+        <%= link_to "Add flat", new_flat_path, class: "btn btn-primary" %>
+        <%# <a href="#" class="btn btn-primary">Add flat</a> %>
+      </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>
